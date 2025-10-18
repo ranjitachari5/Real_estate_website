@@ -1,19 +1,21 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-header, footer { background: #333; color: #fff; text-align: center; padding: 1em 0;}
-nav a { color: #fff; margin: 0 1em; text-decoration: none; }
-section { padding: 2em; }
-.property-list { display: flex; gap: 2em; flex-wrap: wrap; }
-.property-list .property-card { border: 1px solid #ddd; padding: 1em; width: 300px; background: #f9f9f9; }
-form input, form textarea { width: 100%; margin-bottom: 1em; padding: 1em; }
-form button { padding: 1em 2em; background: #333; color: #fff; border: none; }
-#banner-top {
-  position: relative;
-  width: 100%;
-  height: 100px; /* Adjust to your banner's image height */
-  background: linear-gradient(360deg, #23395d 0%, #1a75cf 100%);
-  overflow: hidden;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap');
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+/* Banner Section */
 #banner-image {
   width: 100%;
   height: 100%;
@@ -21,35 +23,207 @@ form button { padding: 1em 2em; background: #333; color: #fff; border: none; }
   display: block;
 }
 
-#banner-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* Navigation Bar */
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #fff;
-  font-size: 2em;
-  font-weight: bold;
-  background: rgba(35, 57, 93, 0.4); /* transparent overlay for visibility */
-  pointer-events: none;
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.gradient-widget {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+.navbar a {
+  text-decoration: none;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 0 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #e63946; /* accent red */
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.8), #f8f9fa);
+}
+
+#hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 20px;
+  color: #555;
+}
+
+/* Properties Section */
+#properties {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#properties h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.property {
+  width: 300px;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.property:hover {
+  transform: scale(1.03);
+}
+
+.property img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 15px 10px 5px;
+}
+
+.property p {
+  margin: 0 10px 15px;
+  color: #666;
+}
+
+/* About Section */
+#about {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Align and style form */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch; /* ensures all inputs are same width */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 6px rgba(230, 57, 70, 0.4);
+  outline: none;
+}
+
+form button {
+  background-color: #e63946;
   color: white;
-  padding: 20px;
-  margin: 15px 0;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.gradient-widget:hover {
-  background: linear-gradient(135deg, #6e66f7eb 0%, #3b5fff 100%);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+form button:hover {
+  background-color: #c72e3a;
+  transform: scale(1.02);
+}
+#contact form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+/* Fade-in Scroll Animation */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
 
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 28px;
+  }
+  .navbar a {
+    margin: 0 10px;
+  }
+}
