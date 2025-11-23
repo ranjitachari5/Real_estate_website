@@ -12,18 +12,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <header>
-    <div class="banner">
-      <img src="images/banner_2.jpg" alt="Crazy Chandra Group Banner">
-    </div>
+<header>
+  <div class="banner">
+    <img src="images/banner_2.jpg" alt="Crazy Chandra Group Banner" id="banner-image">
+  </div>
 
-    <nav class="navbar">
-      <a href="#properties">Properties</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <a href="#properties">Properties</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 
   <section id="hero">
     <h1>Your Dream Home Awaits</h1>
@@ -43,14 +43,20 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Mobile Number" required>
+    <input type="email" name="email" placeholder="Email Optional">
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="thank-you-message" style="display:none; margin-top:15px; color:green; font-weight:600;">
+    Thank you for reaching us. We will contact you shortly.
+  </p>
+</section>
+
 
   <footer>
     <p>&copy; 2025 Crazy Chandra Groups. All rights reserved.</p>

@@ -16,12 +16,19 @@ body {
 }
 
 /* Banner Section */
+.banner {
+  width: 100%;
+  height: 100%;          /* adjust height as you like */
+  overflow: hidden;
+}
+
 #banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 
 /* Navigation Bar */
 .navbar {
@@ -143,13 +150,6 @@ body {
   text-align: center;
 }
 
-/* Contact Section */
-#contact {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-  text-align: center;
-}
-
 #contact h2 {
   font-size: 36px;
   font-family: 'Poppins', sans-serif;
@@ -166,6 +166,15 @@ form {
   align-items: stretch; /* ensures all inputs are same width */
 }
 
+/* Card-style form */
+#contact form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Inputs and textarea */
 form input,
 form textarea {
   width: 100%;
@@ -186,6 +195,7 @@ form textarea:focus {
   outline: none;
 }
 
+/* Button */
 form button {
   background-color: #e63946;
   color: white;
@@ -202,12 +212,15 @@ form button:hover {
   background-color: #c72e3a;
   transform: scale(1.02);
 }
-#contact form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+/* Thank-you message styling */
+#thank-you-message {
+  margin-top: 15px;
+  color: #2f9e44; /* green */
+  font-weight: 600;
+  font-size: 16px;
 }
+
 /* Fade-in Scroll Animation */
 section {
   opacity: 0;
@@ -219,11 +232,26 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Responsive tweaks */
 @media (max-width: 480px) {
   #hero h1 {
     font-size: 28px;
   }
+
   .navbar a {
     margin: 0 10px;
   }
+}
+#thank-you-message {
+  display: none;          /* JS will switch to block */
+  margin: 20px auto 0;
+  max-width: 500px;
+  padding: 12px 16px;
+  background: #d3f9d8;
+  border-left: 4px solid #2f9e44;
+  border-radius: 8px;
+  color: #1b4332;
+  font-weight: 600;
+  font-size: 15px;
 }

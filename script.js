@@ -43,3 +43,16 @@ window.addEventListener("load", () => {
     }
   });
 });
+// Show thank-you message on form submit
+window.addEventListener('load', () => {
+  const form = document.getElementById('contact-form');
+  const thankYou = document.getElementById('thank-you-message');
+
+  if (form && thankYou) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // stop real submit/refresh for now
+      thankYou.style.display = 'block';
+      form.reset();
+    });
+  }
+});
