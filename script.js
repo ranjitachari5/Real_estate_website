@@ -56,3 +56,33 @@ window.addEventListener('load', () => {
     });
   }
 });
+// script.js - WhatsApp Form Submission
+document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  // Your WhatsApp number (with country code, remove + for URL)
+  const yourWhatsappNumber = "919731878494"; // Replace with your number
+  
+  // Format message
+  const formattedMessage = 
+    `New Property Inquiry %0A%0A` +
+    `Name: ${name}%0A` +
+    `Phone: ${phone}%0A` +
+    `Email: ${email || 'Not provided'}%0A` +
+    `Message: ${message || 'No message'}`;
+  
+  // Create WhatsApp URL
+  const whatsappUrl = `https://wa.me/${919731878494}?text=${formattedMessage}`;
+  
+  // Open WhatsApp in new tab
+  window.open(whatsappUrl, '_blank');
+  
+  // Show thank you message
+  document.getElementById('thank-you-message').style.display = 'block';
+  this.reset();
+});
