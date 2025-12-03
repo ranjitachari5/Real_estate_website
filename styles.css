@@ -34,7 +34,7 @@ body {
 .navbar {
   display: flex;
   justify-content: center;
-  background: #fff;
+  background: hsla(216, 100%, 99%, 0.714);
   padding: 15px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -44,7 +44,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: #222;
+  color: #d81a1a;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin: 0 20px;
@@ -52,7 +52,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #e63946; /* accent red */
+  color: #0f0d0d; /* accent red */
 }
 
 /* Hero Section */
@@ -168,7 +168,7 @@ form {
 
 /* Card-style form */
 #contact form {
-  background: #fff;
+  background: #4ccbe4;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -209,14 +209,14 @@ form button {
 }
 
 form button:hover {
-  background-color: #c72e3a;
+  background-color: #582024;
   transform: scale(1.02);
 }
 
 /* Thank-you message styling */
 #thank-you-message {
   margin-top: 15px;
-  color: #2f9e44; /* green */
+  color: #23d1f8; /* green */
   font-weight: 600;
   font-size: 16px;
 }
